@@ -1,0 +1,12 @@
+.root {
+  -fx-background-color: #20232A;
+    -fx-border-color: black;
+
+
+
+    }
+
+.split-pane *.split-pane-divider {
+ -fx-background-color: red;
+
+}
