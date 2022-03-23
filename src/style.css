@@ -6,6 +6,15 @@
 
     }
 
+
+.list-view .list-cell:even {
+-fx-background-color:  #20232A;
+-fx-text-fill: black;
+}
+.list-view .list-cell:odd {
+-fx-background-color:  #20232A;
+-fx-text-fill: black;
+}
 .split-pane *.split-pane-divider {
  -fx-background-color: red;
 

@@ -10,19 +10,16 @@ import javafx.stage.Stage;
 
 public class Window extends Application {
     @Override
-    public void start(Stage primaryStage)  {
+    public void start(Stage primaryStage) {
 
         BorderPane rootPane = new BorderPane();
         rootPane.getStyleClass().add("root");
 
         VBox tabPane = new VBox();
-        Pane pane = new Pane();
-
         tabPane.setPrefWidth(150);
-        tabPane.setBorder(new Border(new BorderStroke(Color.WHITE,
-                BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(0, 10, 0, 0))));
+        tabPane.setBorder(new Border(new BorderStroke(Color.WHITE, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(0, 5, 0, 0))));
         rootPane.setLeft(tabPane);
-        rootPane.setCenter(pane);
+        rootPane.setCenter(new GamePage().getPane());
 
         Scene mainScene = new Scene(rootPane, 1280, 720);
         mainScene.getStylesheets().add("style.css");
@@ -32,3 +29,5 @@ public class Window extends Application {
         primaryStage.show();
     }
 }
+
+
