@@ -1,5 +1,7 @@
-package gui;
+package gui.pages;
 
+import gui.Game;
+import gui.pages.Page;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -7,16 +9,12 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-
-import java.awt.*;
 
 
 public class GamePage extends Page {
@@ -85,11 +83,11 @@ public class GamePage extends Page {
     public Parent getPane() {
         ListView<Pane> pane = new ListView();
 
-        pane.getItems().add(createCell(new Game("GTA", 234, 124)));
-        pane.getItems().add(createCell(new Game("Minecraft", 0, 10)));
-        pane.getItems().add(createCell(new Game("CK2", 442, 4)));
-        pane.getItems().add(createCell(new Game("Red Dead Redemption 2", 4, 3)));
-        pane.getItems().add(createCell(new Game(" Tales of Monkey Island Complete Pack: Chapter 4 – The Trial and Execution of Guybrush Threepwood", 4, 3)));
+
+        for(Game g : Game.getDummyList()){
+            pane.getItems().add(createCell(g));
+
+        }
 
         pane.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, null, null)));
         pane.getStylesheets().add("style.css");
