@@ -22,6 +22,12 @@ public class Window extends Application {
         rootPane.setCenter(new GamePage().getPane());
 
         Scene mainScene = new Scene(rootPane, 1280, 720);
+
+
+
+
+
+
         mainScene.getStylesheets().add("style.css");
 
         primaryStage.setTitle("Window");
