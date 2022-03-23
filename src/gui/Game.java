@@ -15,6 +15,18 @@ public class Game {
         return name;
     }
 
+    public String getNameAbbreviated() {
+
+        return getNameAbbreviated(30);
+    }
+
+    public String getNameAbbreviated(int max) {
+        if(name.length() > max) {
+            return name.substring(0,max) + "...";
+        }
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
