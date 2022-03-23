@@ -1,4 +1,4 @@
-package gui;
+package gui.pages;
 
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
