@@ -22,9 +22,15 @@ public class Window extends Application {
         tabPane.setBorder(new Border(new BorderStroke(Color.WHITE,
                 BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(0, 10, 0, 0))));
         rootPane.setLeft(tabPane);
-        rootPane.setCenter(pane);
+        rootPane.setCenter(new GamePage().getPane());
 
         Scene mainScene = new Scene(rootPane, 1280, 720);
+
+
+
+
+
+
         mainScene.getStylesheets().add("style.css");
 
         primaryStage.setTitle("Window");
@@ -32,3 +38,5 @@ public class Window extends Application {
         primaryStage.show();
     }
 }
+
+
