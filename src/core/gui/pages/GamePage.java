@@ -1,7 +1,6 @@
-package gui.pages;
+package core.gui.pages;
 
-import gui.Game;
-import gui.pages.Page;
+import core.gui.Game;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -30,8 +29,8 @@ public class GamePage extends Page {
         // if cant get img from backend
         ImageView img = new ImageView("/img/notFound.png");
 
-        img.setFitWidth(374 / 3);
-        img.setFitHeight(448 / 3);
+        img.setFitWidth(100);
+        img.setFitHeight(100);
 
 
         Text titleText = new Text(game.getNameAbbreviated());
@@ -84,7 +83,7 @@ public class GamePage extends Page {
         ListView<Pane> pane = new ListView();
 
 
-        for(Game g : Game.getDummyList()){
+        for (Game g : Game.getDummyList()) {
             pane.getItems().add(createCell(g));
 
         }

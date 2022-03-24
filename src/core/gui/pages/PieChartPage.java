@@ -1,6 +1,6 @@
-package gui.pages;
+package core.gui.pages;
 
-import gui.Game;
+import core.gui.Game;
 import javafx.scene.Parent;
 import javafx.scene.chart.PieChart;
 
@@ -14,7 +14,7 @@ public class PieChartPage extends Page {
         pane.setLabelsVisible(false);
         for (Game g : Game.getDummyList()) {
 
-            pane.getData().add(new PieChart.Data(g.getName(), g.getSize()));
+            pane.getData().add(new PieChart.Data(g.getNameAbbreviated(40), g.getSize()));
 
         }
 
