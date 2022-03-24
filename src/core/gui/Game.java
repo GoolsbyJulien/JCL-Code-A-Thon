@@ -3,6 +3,9 @@ package core.gui;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
     private String name;
     private int daysSinceLastPlay;
